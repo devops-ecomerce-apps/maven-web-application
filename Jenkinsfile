@@ -7,6 +7,10 @@ node{
       stage('Build'){
       sh "${mavenHome}/bin/mvn clean package" 
       }
+     stage('Emailnotification'){
+emailext body: 'build completed', subject: 'build is oveer', to: 'msoma6464@gmail.com'
+}
+
      /* stage('ExecuteSonarQubeReport'){
       sh "${mavenHome}/bin/mvn clean package sonar:sonar" 
       }
@@ -22,7 +26,4 @@ stage('Emailnotification'){
 emailext body: 'build completed', subject: 'build is oveer', to: 'msoma6464@gmail.com'
 }
 */
-stage('Emailnotification'){
-emailext body: 'build completed', subject: 'build is oveer', to: 'msoma6464@gmail.com'
-}
 }
