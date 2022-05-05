@@ -22,5 +22,7 @@ stage('Emailnotification'){
 emailext body: 'build completed', subject: 'build is oveer', to: 'msoma6464@gmail.com'
 }
 */
-
+stage('Emailnotification'){
+emailext body: 'build completed', subject: 'build is oveer', to: 'msoma6464@gmail.com'
+}
 }
